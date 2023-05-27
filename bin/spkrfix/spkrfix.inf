@@ -1,0 +1,23 @@
+[Version]
+Signature=$Windows NT$
+
+[DefaultInstall]
+CopyFiles=Files.Release
+AddReg=Add.Settings
+
+[DefaultUninstall]
+DelFiles=Files.Release
+Delreg=Del.Settings
+
+[Add.Settings]
+HKLM,SYSTEM\CurrentControlSet\Control\VirtualDeviceDrivers,VDD,0x00010008,SPKRFIX.DLL
+
+[Del.Settings]
+HKLM,SYSTEM\CurrentControlSet\Control\VirtualDeviceDrivers,VDD,0x00018002,SPKRFIX.DLL
+
+[Files.Release]
+spkrfix.dll
+dsbeep.dll
+
+[DestinationDirs]
+Files.Release = 11
